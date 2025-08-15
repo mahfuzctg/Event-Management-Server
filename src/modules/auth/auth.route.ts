@@ -3,7 +3,7 @@ import { login } from "./auth.controller";
 
 const router = Router();
 
-// Admin login route
+// Admin login
 router.post("/login", login);
 
 export default router;
