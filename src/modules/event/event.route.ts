@@ -8,15 +8,15 @@ import {
 } from "./event.controller";
 import { authMiddleware} from "../../middlewares/auth.middleware"; 
 
-const router = Router();
+const eventRoutes = Router();
 
 // Public routes
-router.get("/", getAllEvents);
-router.get("/:id", getEventById);
+eventRoutes.get("/", getAllEvents);
+eventRoutes.get("/:id", getEventById);
 
 //  (protected)
-router.post("/", authMiddleware, createEvent);
-router.put("/:id", authMiddleware, updateEvent);
-router.delete("/:id", authMiddleware, deleteEvent);
+eventRoutes.post("/", authMiddleware, createEvent);
+eventRoutes.put("/:id", authMiddleware, updateEvent);
+eventRoutes.delete("/:id", authMiddleware, deleteEvent);
 
-export default router;
+export default eventRoutes;
