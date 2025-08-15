@@ -1,1 +1,5 @@
-//   # Global type definitions
+declare namespace Express {
+  interface Request {
+    user?: { id: string; role: string };
+  }
+}
