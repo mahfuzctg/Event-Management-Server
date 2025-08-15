@@ -10,13 +10,12 @@ const env = {
   ADMIN_PASSWORD: process.env.ADMIN_PASSWORD ?? '',
   JWT_SECRET: process.env.JWT_SECRET ?? '',
   JWT_EXPIRES_IN: process.env.JWT_EXPIRES_IN ?? '1d',
-  JWT_COOKIE_SECURE: String(process.env.JWT_COOKIE_SECURE ?? 'false') === 'true'
+  JWT_COOKIE_SECURE: String(process.env.JWT_COOKIE_SECURE ?? 'false') === 'true',
 };
 
+// Validations
 if (!env.MONGO_URI) throw new Error('MONGO_URI missing');
 if (!env.JWT_SECRET || env.JWT_SECRET.length < 32) throw new Error('JWT_SECRET weak or missing');
-if (!env.ADMIN_EMAIL || !env.ADMIN_PASSWORD) {
-  throw new Error('Admin credentials missing');
-}
+if (!env.ADMIN_EMAIL || !env.ADMIN_PASSWORD) throw new Error('Admin credentials missing');
 
 export default env;
