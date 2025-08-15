@@ -5,9 +5,9 @@ import { loginSchema } from "./auth.validation";
 
 // POST /api/auth/login
 export const login = asyncHandler(async (req: Request, res: Response) => {
-  const { username, password } = loginSchema.parse(req.body);
+  const { email, password } = loginSchema.parse(req.body);
 
-  const token = await AuthService.login(username, password);
+  const token = await AuthService.login(email, password);
 
   res.status(200).json({
     success: true,

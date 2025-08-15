@@ -3,7 +3,7 @@ import bcrypt from "bcrypt";
 import { IUserDoc } from "./auth.interface";
 
 const userSchema = new Schema<IUserDoc>({
-  username: { type: String, required: true, unique: true },
+  email: { type: String, required: true, unique: true },
   password: { type: String, required: true },
   role: { type: String, enum: ["admin"], default: "admin" },
 });
