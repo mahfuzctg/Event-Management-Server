@@ -1,5 +1,5 @@
 import { Schema, model } from "mongoose";
-import { IEventDoc, EventStatus } from "./event.interface";
+import { IEventDoc } from "./event.interface";
 import dayjs from "dayjs";
 
 const eventSchema = new Schema<IEventDoc>({
