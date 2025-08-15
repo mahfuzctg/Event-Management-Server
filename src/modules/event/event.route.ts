@@ -14,7 +14,7 @@ const router = Router();
 router.get("/", getAllEvents);
 router.get("/:id", getEventById);
 
-// Admin routes (protected)
+//  (protected)
 router.post("/", authMiddleware, createEvent);
 router.put("/:id", authMiddleware, updateEvent);
 router.delete("/:id", authMiddleware, deleteEvent);
