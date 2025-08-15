@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import routes from "./routes";
+import { errorHandler } from "./middlewares/error.middleware";
 
 
 const app = express();
@@ -13,6 +14,6 @@ app.use(express.urlencoded({ extended: true }));
 app.use("/api", routes);
 
 // Global Error Handler
-// app.use(errorHandler);
+app.use(errorHandler);
 
 export default app;
