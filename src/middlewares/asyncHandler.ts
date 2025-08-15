@@ -1,0 +1,1 @@
+// # Wraps async routes for error catching

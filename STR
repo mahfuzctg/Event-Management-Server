@@ -1,0 +1,44 @@
+backend/
+│
+├── src/
+│   ├── config/
+│   │   ├── db.ts                  # MongoDB connection
+│   │   └── env.ts                 # Environment variables config
+│   │
+│   ├── middlewares/
+│   │   ├── auth.middleware.ts     # JWT authentication middleware
+│   │   ├── role.middleware.ts     # Role-based access control
+│   │   ├── error.middleware.ts    # Global error handler middleware
+│   │   └── asyncHandler.ts        # Wraps async routes for error catching
+│   │
+│   ├── modules/
+│   │   ├── auth/
+│   │   │   ├── auth.controller.ts
+│   │   │   ├── auth.route.ts
+│   │   │   ├── auth.service.ts
+│   │   │   └── auth.validation.ts
+│   │   │
+│   │   ├── event/
+│   │   │   ├── event.constant.ts
+│   │   │   ├── event.interface.ts
+│   │   │   ├── event.model.ts
+│   │   │   ├── event.service.ts
+│   │   │   ├── event.controller.ts
+│   │   │   ├── event.route.ts
+│   │   │   └── event.validation.ts
+│   │
+│   ├── types/
+│   │   ├── global.d.ts            # Global type definitions
+│   │   ├── error.type.ts          # Error-related types
+│   │   └── userRole.type.ts       # User roles enum
+│   │
+│   ├── utils/
+│   │   ├── calculateEventStatus.ts # Logic to determine event status
+│   │   └── jwt.ts                   # JWT sign/verify functions
+│   │
+│   ├── app.ts                       # Express app config
+│   └── server.ts                    # Server entry point
+│
+├── .env
+├── package.json
+└── tsconfig.json
