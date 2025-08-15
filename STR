@@ -31,6 +31,9 @@ backend/
 │   │   ├── global.d.ts            # Global type definitions
 │   │   ├── error.type.ts          # Error-related types
 │   │   └── userRole.type.ts       # User roles enum
+│   ├── routes/
+│   │   ├── index.ts            # wrap all routes
+│   │   
 │   │
 │   ├── utils/
 │   │   ├── calculateEventStatus.ts # Logic to determine event status
