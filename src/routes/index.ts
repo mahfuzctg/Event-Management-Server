@@ -8,7 +8,7 @@ const router = express.Router();
 
 // Correct usage: pass route handlers
 router.use("/auth", authRoutes);
-router.use("/event", eventRoutes);
+router.use("/events", eventRoutes);
 
 
 export default router;
